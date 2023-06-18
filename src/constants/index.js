@@ -46,7 +46,7 @@ const services = [
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Cyber Security Enthusiast",
     icon: mobile,
   },
   {
@@ -129,16 +129,16 @@ const experiences = [
     ],
   },
   {
-    title: "React Native Developer",
+    title: "Cyber Security Enthusiast",
     company_name: "Tesla",
     icon: tesla,
     iconBg: "#E6DEDD",
     date: "Jan 2021 - Feb 2022",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Demonstrating a strong passion for cyber security and actively staying updated with the latest trends and developments in the field.",
+      "Conducting research and analysis to identify potential vulnerabilities and security risks in web applications and systemss.",
+      "Collaborating with cross-functional teams, designers, and product managers, to enhance the security posture of products and systems.",
+      "Participating in code reviews and providing constructive feedback to enhance the overall security of the codebase.",
     ],
   },
   {
