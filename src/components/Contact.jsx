@@ -6,6 +6,8 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
   const formRef = useRef();
@@ -35,11 +37,12 @@ const Contact = () => {
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
+
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Phiroj Shah",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "phirojshah20@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -47,7 +50,9 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Thank you. I will get back to you as soon as possible.");
+          toast.success(
+            "Thank you. I will get back to you as soon as possible."
+          );
 
           setForm({
             name: "",
@@ -59,7 +64,7 @@ const Contact = () => {
           setLoading(false);
           console.error(error);
 
-          alert("Ahh, something went wrong. Please try again.");
+          toast.error("Ahh, something went wrong. Please try again.");
         }
       );
   };
@@ -129,6 +134,19 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        style={{ marginTop: "50px" }}
+      />
     </div>
   );
 };
