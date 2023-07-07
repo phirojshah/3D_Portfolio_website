@@ -38,6 +38,11 @@ export const navLinks = [
     id: "contact",
     title: "Contact",
   },
+  {
+    id: "source-code",
+    title: "Source Code",
+    link: "https://github.com/phirojshah/3D_Portfolio_website",
+  },
 ];
 
 const services = [
